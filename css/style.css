@@ -1,0 +1,473 @@
+/* Warna utama; ubah di sini, semua halaman ikut berubah */
+:root {
+  --hijau:  #43a047;
+  --tua:    #1b5e20;
+  --bg:     #effae6;
+  --kuning: #ffd54f;
+  --oranye: #ff9800;
+}
+
+/* Lebar elemen sudah termasuk padding dan border */
+* {
+  box-sizing: border-box;
+}
+
+/* Tampilan seluruh halaman */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Baloo 2", "Poppins", "Trebuchet MS", sans-serif;
+  background: linear-gradient(#d9f3ff 0, #effae6 220px); /* langit biru ke hijau muda */
+  color: #2b4a2b;
+  text-align: center;
+}
+
+/* Wadah isi halaman, dibatasi lebarnya dan diletakkan di tengah */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+
+/* ---------- 2. BAR ATAS (halaman fitur) ---------- */
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--hijau);
+  color: #fff;
+}
+
+.bar h1 {
+  flex: 1;
+  margin: 0;
+  font-size: 1.6rem;
+  text-align: center;
+}
+/* Gambar dan tombol suara berdampingan */
+.baris-gambar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* Tombol suara bulat */
+.btn-suara {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--hijau);
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+.btn-suara .material-symbols-rounded { font-size: 2.2rem; }
+.btn-suara:active { transform: translateY(4px); box-shadow: none; }
+.btn-suara:focus-visible { outline: 4px solid #1565c0; outline-offset: 3px; }
+
+/* Tombol rumah bulat untuk kembali ke beranda */
+.home {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--tua);
+  font-size: 1.7rem;
+  text-decoration: none;
+  
+}
+
+.home i {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+button.home { border: 0; padding: 0; font-family: inherit; cursor: pointer; }
+.home:active { transform: scale(0.92); }
+.home img { width: 60%; height: 60%; object-fit: contain; }
+
+.back {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #d3c9ff;
+  color: var(--tua);
+  font-size: 1.7rem;
+  text-decoration: none;
+}
+
+/* ---------- 3. BERANDA (index.html) ---------- */
+
+.hero  { margin: 10px 0 0; font-size: 5rem; }          /* ikon tanaman besar */
+.judul { margin: 0; font-size: 2.6rem; color: var(--tua); }
+.sub   { margin: 6px 0 22px; font-size: 1.90rem; }      /* kalimat di bawah judul */
+
+/* Susunan tombol menu: otomatis 1-2 kolom sesuai lebar layar */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.menu a {
+  display: block;
+  padding: 22px 12px;
+  border-radius: 28px;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* Ikon emoji di atas tulisan menu */
+.menu a span {
+  display: block;
+  font-size: 3.2rem;
+}
+
+/* Warna tiap tombol menu */
+.c0 { background: #e53935; }   /*tombol mulai*/
+.c1 { background: #66bb6a; }  /* Mengenal Huruf */
+.c2 { background: #ffa726; }  /* Membaca Kata   */
+.c3 { background: #42a5f5; }  /* Menyusun Kata  */
+.c4 { background: #ab47bc; }  /* Kuis           */
+
+
+/* ---------- 4. KOTAK KONTEN (halaman fitur) ---------- */
+
+.panel {
+  padding: 22px 12px;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+.besar {                      /* huruf besar, mis. "Dd" */
+  font-size: 7rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--tua);
+}
+
+.emoji {                      /* gambar/emoji tanaman */
+  font-size: 6rem;
+  line-height: 1.2;
+}
+
+.kata {                       /* kata, mis. "daun" */
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #e65100;
+}
+
+/* Gambar buatan sendiri (img/<kata>.png) */
+.emoji img {
+  height: 150px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.pesan {                      /* teks pujian / petunjuk */
+  min-height: 2.2rem;
+  margin-top: 10px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--tua);
+}
+
+
+/* ---------- 5. TOMBOL ---------- */
+
+/* Baris tombol di bawah panel */
+.aksi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+/* Tombol dasar (oranye) */
+.btn {
+  padding: 12px 28px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--oranye);
+  color: #fff;
+  font: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Varian warna tombol */
+.btn.hijau { background: #ff9800; }
+.btn.biru  { background: #29b6f6; }
+
+/* Efek tombol "tertekan" saat disentuh */
+.menu a:active,
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+/* Garis biru saat tombol dipilih dengan keyboard (aksesibilitas) */
+.btn:focus-visible,
+.grid button:focus-visible,
+.tile:focus-visible,
+.pilihan button:focus-visible,
+.menu a:focus-visible {
+  outline: 4px solid #1565c0;
+  outline-offset: 3px;
+}
+
+
+/* ---------- 6. MENGENAL HURUF: deretan huruf ---------- */
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.grid button {
+  width: 48px;
+  height: 48px;
+  border: 3px solid var(--hijau);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--tua);
+  font: inherit;
+  font-size: 1.3rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Huruf yang sedang ditampilkan */
+.grid button.on {
+  background: var(--kuning);
+}
+
+
+/* ---------- 7. MENYUSUN KATA ---------- */
+
+/* Baris kotak kosong dan baris huruf acak */
+.slots,
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px 0;
+}
+
+/* Ukuran dasar kotak kosong dan kotak huruf */
+.slot,
+.tile {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 72px;
+  border-radius: 16px;
+  font: inherit;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+
+/* Kotak kosong tempat huruf diletakkan (garis putus-putus) */
+.slot {
+  border: 4px dashed #9ccc65;
+  background: #f7fff0;
+  color: var(--tua);
+  cursor: pointer;
+}
+
+/* Huruf acak yang diketuk anak (kuning) */
+.tile {
+  border: 0;
+  background: var(--kuning);
+  color: #5d4037;
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Huruf yang sudah dipakai jadi pudar */
+.tile:disabled {
+  opacity: 0.25;
+  box-shadow: none;
+}
+
+/* Pesan "Hebat!" muncul dengan efek membesar */
+.pesan.muncul { animation: muncul 0.5s ease-out; }
+@keyframes muncul {
+  0%   { transform: scale(0.3); opacity: 0; }
+  70%  { transform: scale(1.25); }
+  100% { transform: scale(1);   opacity: 1; }
+}
+
+/* Layar berkedip merah saat jawaban salah */
+.kedip-merah {
+  position: fixed;
+  inset: 0;                    /* menutupi seluruh layar */
+  background: #e53935;
+  opacity: 0;
+  pointer-events: none;        /* tidak menghalangi klik */
+  z-index: 998;
+  animation: kedipMerah 0.8s ease-in-out;
+}
+@keyframes kedipMerah {
+  0%, 100% { opacity: 0; }
+  25%      { opacity: 0.35; }  /* kedip pertama */
+  50%      { opacity: 0.05; }
+  75%      { opacity: 0.30; }  /* kedip kedua */
+}
+
+
+/* ---------- 8. KUIS: pilihan gambar ---------- */
+
+.pilihan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.pilihan button {
+  padding: 8px 16px;
+  border: 5px solid #c5e1a5;
+  border-radius: 24px;
+  background: #fff;
+  font-size: 4.5rem;
+  cursor: pointer;
+}
+
+/* Gambar buatan sendiri di dalam pilihan */
+.pilihan img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Hasil jawaban */
+.pilihan button.benar { background: #c8e6c9; border-color: var(--hijau); }
+.pilihan button.salah { background: #ffcdd2; border-color: #e53935; }
+
+
+/* ---------- 9. LAYAR KECIL (HP, lebar <= 480px) ---------- */
+
+@media (max-width: 480px) {
+  .besar { font-size: 5.5rem; }
+  .emoji { font-size: 4.5rem; }
+  .kata  { font-size: 2.3rem; }
+
+  .slot,
+  .tile {
+    width: 52px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
+/* ---------- 11. HALAMAN PROFIL ---------- */
+a.btn { display: inline-block; text-decoration: none; }
+.link-profil { margin-top: 26px; }
+ 
+/* Susunan: kiri (foto + logo), kanan (kotak keterangan) */
+.layout { display: flex; gap: 20px; align-items: flex-start; }
+.sisi   { display: flex; flex-direction: column; align-items: center; gap: 18px; width: 190px; flex-shrink: 0; }
+.item   { text-align: center; }
+ 
+/* Lingkaran foto dan logo (tombol yang bisa diklik) */
+.lingkaran {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 6px solid var(--hijau);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #c8e6c9;
+  font-size: 4rem;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s;
+}
+.lingkaran:hover  { transform: scale(1.05); }
+.lingkaran:active { transform: scale(0.97); }
+.lingkaran:focus-visible { outline: 4px solid #1565c0; outline-offset: 3px; }
+.lingkaran span, .lingkaran img { display: grid; place-items: center; width: 100%; height: 100%; object-fit: cover; }
+.besar-l { width: 170px; height: 170px; }
+.kecil-l { width: 120px; height: 120px; border-color: #1976d2; background: #fff8e1; font-size: 3rem; }
+.cap { margin: 8px 0 0; font-size: 1.15rem; font-weight: 700; color: var(--tua); line-height: 1.2; }
+.cap small { font-weight: 400; color: #6b8a6b; }
+ 
+/* Kotak keterangan di kanan */
+.profil { flex: 1; min-width: 0; text-align: left; }
+.nama  { margin: 0; font-size: 2rem; color: var(--tua); }
+.peran { margin: 0 0 8px; font-size: 1.2rem; }
+.profil h3 {
+  margin: 22px 0 8px;
+  padding-bottom: 6px;
+  border-bottom: 4px dotted #aed581;
+  color: var(--tua);
+  font-size: 1.5rem;
+}
+.profil .teks { margin: 0; font-size: 1.15rem; line-height: 1.5; }
+ 
+/* Daftar label : isi */
+.info {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  text-align: left;
+  font-size: 1.15rem;
+}
+.info dt { font-weight: 700; color: var(--tua); }
+.info dd { margin: 0; }
+ 
+/* Jendela biodata */
+dialog {
+  width: min(520px, 92vw);
+  padding: 0;
+  border: 0;
+  border-radius: 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+dialog::backdrop { background: rgba(27, 94, 32, 0.45); }
+.modal-isi { padding: 22px 20px 24px; text-align: center; background: #fff; }
+.modal-isi h2 { margin: 0 0 12px; font-size: 1.8rem; color: var(--tua); }
+.foto-modal {
+  display: grid; place-items: center;
+  width: 130px; height: 130px; margin: 0 auto 16px;
+  border: 5px solid var(--hijau); border-radius: 50%;
+  overflow: hidden; background: #c8e6c9; font-size: 3.5rem;
+}
+.foto-modal img { width: 100%; height: 100%; object-fit: cover; }
+.modal-isi .btn { margin-top: 20px; }
+ 
+/* Layar kecil: foto dan logo berdampingan di atas kotak */
+@media (max-width: 600px) {
+  .layout { flex-direction: column; align-items: stretch; }
+  .sisi   { width: 100%; flex-direction: row; justify-content: center; gap: 28px; }
+  .besar-l { width: 140px; height: 140px; }
+  .kecil-l { width: 100px; height: 100px; }
+}
+@media (max-width: 480px) { .info { grid-template-columns: 1fr; gap: 0; } .info dd { margin-bottom: 10px; } }

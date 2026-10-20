@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profil Pengembang - E-Book Tanaman</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<div class="bar">
+    <a href="pengaturan.html">
+    <button type="button" class="home" aria-label="kembali">
+        <img src="img/kembali.png" alt="kembali" onerror="this.replaceWith('⬅️')">
+    </button>
+    </a>
+    <a class="home" href="index.html" aria-label="Beranda">🏠</a>
+    <h1>Profil</h1></div>
+<main>
+  <div class="layout">
+    <aside class="sisi">
+      <div class="item">
+        <button class="lingkaran besar-l" id="btnFoto" aria-label="Lihat biodata pengembang"><span id="foto"></span></button>
+        <p class="cap">Pengembang<br></p>
+      </div>
+      <div class="item">
+        <button class="lingkaran besar-l" id="btnLogo" aria-label="Lihat biodata universitas"><span id="logo"></span></button>
+        <p class="cap">Universitas<br></p>
+      </div>
+    </aside>
+
+    <!-- KANAN: keterangan pengembang -->
+    <section class="panel profil">
+      <h2 class="nama" id="nama"></h2>
+      <p class="peran" id="peran"></p>
+      <h3>Tentang Penelitian</h3>
+      <p class="teks" id="judul"></p>
+      <h3>Tentang Produk</h3>
+      <dl class="info" id="produk"></dl>
+    </section>
+  </div>
+
+  <!-- Jendela biodata (muncul saat foto/logo diklik) -->
+  <dialog id="modal">
+    <div class="modal-isi">
+      <h2 id="mJudul"></h2>
+      <div class="foto-modal" id="mGambar"></div>
+      <dl class="info" id="mData"></dl>
+      <button class="btn" id="tutup">Tutup ✖</button>
+    </div>
+  </dialog>
+</main>
+<script src="js/data.js"></script><script src="js/profil.js"></script>
+</body></html>

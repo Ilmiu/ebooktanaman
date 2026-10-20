@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>E-Book Tanaman</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+    </head>
+    <body>
+        <div class="bar">
+            <a class="home" href="index.html" aria-label="Beranda">
+                <span class="material-symbols-rounded">home</span>
+            </a>
+            <h1>Mengenal Huruf</h1>
+            <a class="home" href="pengaturan.html" aria-label="Pengaturan">
+                <span class="material-symbols-rounded">settings</span>
+            </a>
+        </div>
+        <main>
+            <div class="panel">
+                <div class="besar" id="huruf"></div>
+                <div class="emoji" id="gambar"></div>
+                <div class="kata" id="kata"></div>
+                <div class="aksi">
+                    <button class="btn biru" id="prev">
+                        <span class="material-symbols-rounded">arrow_back</span>
+                    </button>
+                    <button class="btn ijo" id="suara">
+                        <span class="material-symbols-rounded">volume_up</span>
+                    </button>
+                    <button class="btn biru" id="next">
+                        <span class="material-symbols-rounded">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <!-- <div class="panel">
+                <div class="besar" id="huruf"></div>
+                <div class="emoji" id="gambar"></div>
+                <div class="kata" id="kata"></div>
+                <div class="aksi">
+                    <button class="btn biru" id="prev">⬅️</button>
+                    <button class="btn hijau" id="suara">🔊</button>
+                    <button class="btn biru" id="next">➡️</button>
+                </div>
+            </div> -->
+            <div class="grid" id="daftar"></div>
+        </main>
+        <script src="js/data.js"></script><script src="js/huruf.js"></script>
+    </body>
+    <footer>copyright2026</footer>
+</html>

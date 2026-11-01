@@ -1,7 +1,7 @@
 const DATA=[
 {h:'A',k:'apel',s:'a-pel',e:'🍎'},{h:'B',k:'bunga',s:'bu-nga',e:'🌸'},{h:'C',k:'cabai',s:'ca-bai',e:'🌶️'},
 {h:'D',k:'daun',s:'da-un',e:'🍃'},{h:'E',k:'edamame',s:'e-da-ma-me',e:'💧'},{h:'F',k:'frambos',s:'fram-bos',e:'💧'},{h:'G',k:'gandum',s:'gan-dum',e:'🌾'},
-{h:'H',k:'hazelnut',s:'ha-zel-nut',e:'🍍'},{h:'I',k:'Iris',s:'i-ris',e:'🍍'},{h:'J',k:'jagung',s:'ja-gung',e:'🌽'},{h:'K',k:'kelapa',s:'ke-la-pa',e:'🥥'},{h:'L',k:'lemon',s:'le-mon',e:'🍋'},
+{h:'H',k:'hazelnut',s:'ha-zel-nut',e:'🍍'},{h:'I',k:'iris',s:'i-ris',e:'🍍'},{h:'J',k:'jagung',s:'ja-gung',e:'🌽'},{h:'K',k:'kelapa',s:'ke-la-pa',e:'🥥'},{h:'L',k:'lemon',s:'le-mon',e:'🍋'},
 {h:'M',k:'mangga',s:'mang-ga',e:'🥭'},{h:'N',k:'nanas',s:'na-nas',e:'🍍'},{h:'O',k:'okra',s:'o-kra',e:'🍍'},{h:'P',k:'pohon',s:'po-hon',e:'🌳'},
 {h:'R',k:'rumput',s:'rum-put',e:'🌿'},{h:'S',k:'semangka',s:'se-mang-ka',e:'🍉'},{h:'T',k:'tomat',s:'to-mat',e:'🍅'},
 {h:'U',k:'ubi',s:'u-bi',e:'🍠'},{h:'V',k:'vanila',s:'va-ni-la',e:'🍍'},{h:'W',k:'wortel',s:'wor-tel',e:'🥕'}];

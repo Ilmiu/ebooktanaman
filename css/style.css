@@ -11,6 +11,31 @@
 * {
   box-sizing: border-box;
 }
+/* Tombol panah besar tanpa lingkaran / latar */
+.panah {
+  display: grid;
+  place-items: center;
+  min-width: 72px;
+  min-height: 72px;              /* area sentuh tetap besar untuk jari anak */
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: #29b6f6;
+  cursor: pointer;
+}
+/* panah */
+.panah .material-symbols-rounded {
+  font-size: 4.5rem;             /* ukuran panah */
+  font-variation-settings: 'FILL' 200, 'wght' 1000;   /* garis tebal */
+}
+.panah:hover  { color: #0288d1; }
+.panah:active { transform: scale(0.85); }
+.panah:focus-visible { outline: 9px solid #1565c0; outline-offset: 3px; border-radius: 12px; }
+
+@media (max-width: 480px) {
+  .panah .material-symbols-rounded { font-size: 3.5rem; }
+}
 
 /* Tampilan seluruh halaman */
 body {
@@ -187,7 +212,18 @@ button.home { border: 0; padding: 0; font-family: inherit; cursor: pointer; }
   font-weight: 700;
   color: var(--tua);
 }
-
+/* Tabel */
+/* Tabel cek file */
+.cek { width: 100%; border-collapse: collapse; text-align: left; font-size: 1.05rem; }
+.cek th {
+  padding: 10px;
+  background: var(--hijau);
+  color: #fff;
+}
+.cek td { padding: 8px 10px; border-bottom: 2px solid #e8f5e9; vertical-align: middle; }
+.cek tbody tr:nth-child(even) { background: #f7fff0; }   /* baris selang-seling */
+.cek td img { display: block; width: 48px; height: 48px; object-fit: contain; }
+.cek tfoot td { padding-top: 14px; font-weight: 700; color: var(--tua); }
 
 /* ---------- 5. TOMBOL ---------- */
 

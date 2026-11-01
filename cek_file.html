@@ -4,6 +4,8 @@
         <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Cek File - E-Book Tanaman</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded">
+
     </head>
     <body>
         <div class="bar">
@@ -12,22 +14,29 @@
                 <img src="img/kembali.png" alt="kembali" onerror="this.replaceWith('⬅️')">
             </button>
             </a>
-            <a class="home" href="index.html" aria-label="Beranda">🏠</a>
+            <a class="home" href="index.html" aria-label="Beranda">
+                <span class="material-symbols-rounded">home</span>
+            </a>
             <h1>Cek File Gambar & Suara</h1>
         </div>
         <main>
             <p class="sub">Halaman ini untuk memastikan apakah file di folder <b>img/</b> dan <b>audio/</b> sudah terbaca.</p>
             <div class="panel" style="overflow-x:auto">
-                <table class="cek">
-                    <thead>
-                        <tr>
-                            <th>Kata</th>
-                            <th>Gambar</th>
-                            <th>Suara</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hasil"></tbody>
-                </table>
+            <table class="cek">
+                <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Kata</th>
+                    <th>Gambar</th>
+                    <th>File Gambar</th>
+                    <th>File Suara</th>
+                </tr>
+                </thead>
+                <tbody id="hasil"></tbody>
+                <tfoot>
+                <tr><td colspan="5" id="ringkasan">Memeriksa...</td></tr>
+                </tfoot>
+            </table>
             </div>
         </main>
         <script src="js/data.js"></script><script src="js/cek.js"></script>
